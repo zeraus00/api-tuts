@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\SampleController;
 use App\Http\Controllers\Library\UserController;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -21,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/users', [UserController::class, 'getUsers']); //route to get users
+Route::get('/getUsers', [SampleController::class, 'getUsers']);
