@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\Employee;
 class UserController extends Controller
 {
-    public function getUsers()
+    public function getAllUsers()
     {
         $users = Employee::all(); //get all users of Employee
         return $users; // return the users
-        
+
     }
 }
