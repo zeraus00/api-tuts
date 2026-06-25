@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function getUsers()
     {
-        $users = Employee::all();
-        return $users;
+        $users = Employee::all(); //get all users of Employee
+        return $users; // return the users
     }
 }
