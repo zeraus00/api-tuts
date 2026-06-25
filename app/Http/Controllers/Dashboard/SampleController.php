@@ -40,13 +40,26 @@ class SampleController extends Controller
         //     return "No record Found.";
         // }
     }
-
+    //hardcoded code
     public function createUser()
     {
+        //this is hard coded
         $insert = Employee::create([
             'name' => 'Renalyn',
             'email' => 'Renalyntrndd@gmail.com',
             'password' => '12345',
+        ]);
+
+        return $insert ? "Success" : "Error";
+    }
+
+    //creating user using request (front end to backend)
+    public function createUsers(Request $request)
+    {
+        $insert = Employee::create([
+            'name' => $request -> name,
+            'email' => $request -> email,
+            'password' => $request -> password,
         ]);
 
         return $insert ? "Success" : "Error";
