@@ -56,6 +56,16 @@ class SampleController extends Controller
     //creating user using request (front end to backend)
     public function createUsers(Request $request)
     {
+
+        $email = $request -> email;
+        $checker = Employee::where('email', $email)
+        -> first();
+
+        if($checker)
+            {
+                return "Already Registered!";
+            }
+
         $insert = Employee::create([
             'name' => $request -> name,
             'email' => $request -> email,
