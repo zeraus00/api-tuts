@@ -24,7 +24,16 @@ class SampleController extends Controller
                 return "No record found.";
             }
         // $users = Employee::find(1); objoect or single data
+
+        //checking if the it contains data using single data
         // $users = Employee::where('id', '=', 1)
-        // -> first();
+        // -> first(); // single data
+
+        // if ($users) {
+        //     return $users;
+        // }
+        // else {
+        //     return "No record Found.";
+        // }
     }
 }
