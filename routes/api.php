@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\SampleController;
+use App\Http\Controllers\Library\ContractualCrtl;
 use App\Http\Controllers\Library\UserController;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -25,3 +26,4 @@ Route::get('/users', [UserController::class, 'getAllUsers']); //route to get use
 Route::get('/getUsers', [SampleController::class, 'getUsers']);
 Route::post('/createUser', [SampleController::class, 'createUser']);
 Route::post('/createUsers', [SampleController::class, 'createUsers']);
+Route::get('/AllContractuals', [ContractualCrtl::class, 'index']);
