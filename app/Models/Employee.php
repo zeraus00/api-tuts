@@ -9,10 +9,11 @@ class Employee extends Model
 {
     use HasFactory;
 
-    public $table = "users";
+    protected $connection = 'mysql';
+    public $table = "employees";
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'position',
     ];
 }
